@@ -1,13 +1,23 @@
+:root{
+    --azul-dnc: #0c70f2;
+    --preto-dnc: #303030;
+    --cinza-hover: #c9c9c9;
+
+    --fonte-padrao: 'Inter';
+}
+
 body{
     margin: 0px;
     padding: 0px;
+    background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242,0) 24.84%), #303030;
+    background-repeat: no-repeat;
 }
 
     #principal{
         width: 100%;
         height: 100px;
         border: 1px solid black;
-        background-color: #303030;  
+        background-color: var(--preto-dnc);
         display: flex; 
         justify-content: space-between;
         align-items: center;
@@ -27,24 +37,120 @@ body{
             font-size: 25px;
             font-weight: 600;
             text-decoration: none;
-            font-family: Inter, Arial, Helvetica, sans-serif;
+            font-family: var(--fonte-padrao), Arial, Helvetica, sans-serif;
         }
 
         #principal div a:hover{
-            color:lightblue
+            color:var(--cinza-hover)
         }       
 
         #principal button{
             margin-right: 5%;
-            background-color: blue;
+            background-color: var(--azul-dnc);
             border: 0px;
             height: 40px;
             width: 80px;
             border-radius: 5px;
-            font-family: Inter, Arial;
+            font-family: var(--fonte-padrao), Helvetica, sans-serif;
             color: white;
             font-weight: 600;
             font-size: 20px;
             box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.5);
             cursor: pointer;
         }
+
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+            header{
+                color: white;
+                font-family: var(--fonte-padrao);
+            }
+
+            header h1{
+                font-size: 80px;
+                font-weight: 800;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            header h2{
+                font-family: var(--fonte-padrao);
+                text-align: center;
+                margin-bottom: 150px;
+                font-size: 40px;
+                font-weight: 700;
+            }
+
+            header .invert{
+                background-color: black;
+                font-weight: bold;
+                padding: 3px;
+            }
+
+            /* Formulário*/
+
+            form{
+                color: white;
+                font-family: var(--fonte-padrao);
+                font-size: 30px;
+                font-weight: 600;    
+                width: 600px;            
+            }
+
+            .form-group{
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+                margin-bottom: 20px;                
+            }
+
+            form input{
+                border-radius: 10px;
+                border: 0px;
+                height: 40px;
+                font-size: 20px;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, .9);
+            }
+
+            form label{
+                margin: 10px;
+            }
+            
+
+            form input::placeholder{
+                color: rgba(57, 57, 57, 0.5)
+            }
+
+            .checkbox-itens label{
+                font-size: 25px;
+            }
+
+            .checkbox-itens{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            input[type="checkbox"]{
+                transform: scale(2);
+            }
+
+            input[type="submit"]{
+                background-color: var(--azul-dnc);
+                width: 100%;
+                height: 56px;
+                font-weight: 600;
+                font-size: 32px;
+                color: white;
+                box-shadow: rgba(12, 112, 242, 0.5);
+                margin-top: 50px ;
+                cursor: pointer;
+            }
